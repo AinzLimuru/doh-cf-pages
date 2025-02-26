@@ -125,14 +125,14 @@ export const onRequestGet = async ({ request }) => {
             return new Response(responseBuffer, {
                 status: 200,
                 headers: {
-                    'Content-Type': contype,
+                    'Content-Type': jstontype,
                 }
             });
         } else {
             return await fetch(doh + '?name=' + dnsQuery, {
                 method: 'GET',
                 headers: {
-                    'Accept': contype,
+                    'Accept': jstontype,
                 }
             });
         }
