@@ -129,7 +129,7 @@ export const onRequestGet = async ({ request }) => {
                 }
             });
         } else {
-            return await fetch(doh + '?dns=' + dnsQuery, {
+            return await fetch(doh + '?name=' + dnsQuery, {
                 method: 'GET',
                 headers: {
                     'Accept': contype,
